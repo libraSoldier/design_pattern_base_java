@@ -10,7 +10,7 @@ import java.util.Stack;
  * @create 2020/4/22 10:48 上午
  * @Description rec: 中序遍历二叉树
  */
-public class MidOrder {
+public class MidOrder extends BaseTree {
 
     /**
      * 1）前序遍历：先遍历根节点，然后遍历左子节点，最后遍历右子节点，简记为“根-左-右”；
@@ -20,16 +20,6 @@ public class MidOrder {
      * 3）后序遍历：先遍历左子节点，然后遍历右子节点，最后遍历根节点，简记为“左-右-根”；
      * */
 
-    private static class TreeNode{
-        TreeNode left;
-        TreeNode right;
-
-        int value;
-        TreeNode(int x) {
-            value = x;
-        }
-    }
-
     public static void main(String[] args) {
 
         TreeNode[] binaryTree = createCompleteBinaryTree();
@@ -37,28 +27,6 @@ public class MidOrder {
         midOrderRe(binaryTree[0]);
 
         midOrder(binaryTree[0]);
-    }
-
-    private static TreeNode[] createCompleteBinaryTree(){
-        // 以数组形式生成一棵完全二叉树
-        // 若设二叉树的深度为k，除第 k 层外，其它各层 (1～k-1) 的结点数都达到最大个数，第k 层所有的结点都连续集中在最左边，这就是完全二叉树。
-        TreeNode[] binaryTree = new TreeNode[10];
-        // rec: 创建节点
-        for (int i = 0; i < 10; i++) {
-            binaryTree[i] = new TreeNode(i);
-        }
-        // rec: 构建完全二叉树
-        for (int i = 0; i < 10; i++) {
-            if(i*2+1<10){
-                // 左子树为奇数，例如0左边是1
-                binaryTree[i].left = binaryTree[i*2+1];
-            }
-            if(i*2+2<10){
-                // 右子树为偶数，例如0右边是2
-                binaryTree[i].right = binaryTree[i*2+2];
-            }
-        }
-        return binaryTree;
     }
 
     /**
@@ -76,7 +44,6 @@ public class MidOrder {
             midOrderRe(biTree.right);
         }
     }
-
 
     /**
      * rec: 中序遍历 - 非递归实现
