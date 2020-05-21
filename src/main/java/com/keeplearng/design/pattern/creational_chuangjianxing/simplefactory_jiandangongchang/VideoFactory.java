@@ -18,7 +18,11 @@ public class VideoFactory {
         return video;
     }
 
-
+    /**
+     * rec: 方法的返回类型为接口类型，根据传入的参数去实例化接口的不同实现类，并返回
+     * @param type
+     * @return
+     */
     public Video getVideo(String type){
         if("java".equalsIgnoreCase(type)){
             return new JavaVideo();

@@ -5,6 +5,7 @@ import java.lang.reflect.InvocationTargetException;
 
 /**
  * Created by liangyu
+ * rec: 重点：私有构造器、线程安全、延迟加载、序列化和反序列化安全、反射
  */
 public class Test {
     public static void main(String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {

@@ -2,6 +2,7 @@ package com.keeplearng.design.pattern.creational_chuangjianxing.singleton_danli;
 
 /**
  * Created by liangyu
+ * rec: 懒汉式单例模式
  */
 public class LazySingleton {
     private static LazySingleton lazySingleton = null;
@@ -11,6 +12,7 @@ public class LazySingleton {
         }
     }
     public synchronized static LazySingleton getInstance(){
+        // rec: 多线程不安全
         if(lazySingleton == null){
             lazySingleton = new LazySingleton();
         }

@@ -4,6 +4,9 @@ package com.keeplearng.design.pattern.creational_chuangjianxing.simplefactory_ji
  * Created by liangyu
  */
 public abstract class Video {
+    /**
+     * 生产视频
+     */
     public abstract void produce();
 
 }

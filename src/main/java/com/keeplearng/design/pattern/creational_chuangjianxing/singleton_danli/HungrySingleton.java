@@ -4,9 +4,10 @@ import java.io.Serializable;
 
 /**
  * Created by liangyu
+ * rec: 饿汉式单例模式
  */
 public class HungrySingleton implements Serializable,Cloneable{
-
+    // rec: 声明为final，必须在类加载时就初始化完成
     private final static HungrySingleton hungrySingleton;
 
     static{
@@ -21,6 +22,7 @@ public class HungrySingleton implements Serializable,Cloneable{
         return hungrySingleton;
     }
 
+    // 解决：类序列化、反序列化后类不相同问题
     private Object readResolve(){
         return hungrySingleton;
     }
