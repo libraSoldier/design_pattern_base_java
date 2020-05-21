@@ -8,6 +8,20 @@ import java.lang.reflect.InvocationTargetException;
  * rec: 重点：私有构造器、线程安全、延迟加载、序列化和反序列化安全、反射
  */
 public class Test {
+
+    /**
+     * 单例模式总结：
+     *
+     * 1、优点
+     * rec: 在内存里只有一个实例，减少了内存开销
+     * rec: 可以避免对资源的多重占用
+     * rec: 设置全局访问点，严格控制访问
+     *
+     * 2、缺点
+     * rec: 没有接口，扩展困难
+     * */
+
+
     public static void main(String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
 //        LazySingleton lazySingleton = LazySingleton.getInstance();
 
